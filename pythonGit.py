@@ -39,18 +39,7 @@ os.chdir(first_directory)
 def app():
     try:
         while True:
-            command_branch = "git branch"
-            result = subprocess.run(command_branch, capture_output=True, text=True)
-            text = result.stdout
-            current_branch = ""
-            if text != "":
-                branches = text.split('\n')
-                
-                
-                for i in branches:
-                   if i[0] == '*':
-                       current_branch = i
-                       break
+            
                 
             now_directory = os.getcwd()
 
@@ -63,14 +52,11 @@ def app():
 
 
             })
-            if current_branch == "":
-                command = session.prompt(
-                    HTML(f"<b><yellow>{now_directory}</yellow><violet>?</violet></b>"), completer=completer,
-                    style=our_style, bottom_toolbar=bottom_toolbar).split()
-            else:
-                command = session.prompt(
-                    HTML(f"<b><yellow>{now_directory}</yellow>(<green>{current_branch}</green>)<violet>?</violet></b>"), completer=completer,
-                    style=our_style, bottom_toolbar=bottom_toolbar).split()
+            
+            command = session.prompt(
+                HTML(f"<b><yellow>{now_directory}</yellow><violet>?</violet></b>"), completer=completer,
+                style=our_style, bottom_toolbar=bottom_toolbar).split()
+            
             if len(command) > 0:
                 now_directory = os.getcwd()
                 if command[0] == 'ls':

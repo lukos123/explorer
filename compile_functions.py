@@ -5,8 +5,8 @@ import subprocess
 
 def git_branch():
     arr =[]
-    command = "git branch"
-    result = subprocess.run(command, capture_output=True, text=True)
+    command_branch = "git branch"
+    result = subprocess.run(command_branch, capture_output=True, text=True)
     text = result.stdout
     if text != "":
       branches = text.split('\n')

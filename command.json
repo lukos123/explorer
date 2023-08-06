@@ -111,12 +111,12 @@
       }
     },
     "push": {
-      "origin": "git_branch"
+      "origin": "N"
     },
     "pull": {
-      "origin": "git_branch"
+      "origin": "N"
     },
-    "checkout": "git_branch",
+    "checkout": "N",
     "remote ": {
       "add": {
         "origin": {}
