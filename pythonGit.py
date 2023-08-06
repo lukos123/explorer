@@ -9,11 +9,11 @@ import subprocess
 import sys
 
 import colorama
-from MyCompleter import MyCompleter
+
 
 import custom_functions
-
-
+print(os.getcwd())
+from MyCompleter import MyCompleter
 colorama.init()
 
 
