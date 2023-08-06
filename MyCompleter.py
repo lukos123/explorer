@@ -5,7 +5,7 @@ from prompt_toolkit.completion import Completer, Completion
 from compile_functions import functions
 
 import os
-with open('~/explorer/command.json', 'r') as f:
+with open('/data/data/com.termux/files/home/explorer/command.json', 'r') as f:
 
     data = json.load(f)
 
