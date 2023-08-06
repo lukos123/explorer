@@ -39,8 +39,8 @@ os.chdir(first_directory)
 def app():
     try:
         while True:
-            command = "git branch"
-            result = subprocess.run(command, capture_output=True, text=True)
+            command_branch = "git branch"
+            result = subprocess.run(command_branch, capture_output=True, text=True)
             text = result.stdout
             current_branch = ""
             if text != "":
